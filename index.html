@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo: Layout with Dijit</title>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+        data-dojo-config="async:true, parseOnLoad:true"></script>
+        <script> require(["dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/TabContainer",
+        "dijit/layout/ContentPane"]);</script>
+        <link rel="stylesheet" href="main.css" media="screen">
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css" media="screen">
+    </head>
+    
+    <body class="claro">
+
+    <!-- We are going to use Dijit to make a sweet layout with a header, a sidebar, and a main pane with tabs to for different content-->
+    
+    <!-- 1) In the <div> with id "appLayout", instantiate Dijits border container by using "data-dojo-type" and set it equal to "dijit/layout/BorderContainer". Give the <div> parser parameters by using "data-dojo-props" and set it equal to "design: 'headline'"-->
+    <!-- 2) Lets make the center panel where we will make tabs to different content pages. Create a <div> with class "centerPanel. Now use "data-dojo-type" to get the tab container "dijit/layout/TabContainer". Position the tab container with data-dojo-props="region: 'center', tabPosition: 'bottom'". You can change the orientation of the container or put the tabs elsewhere. -->
+    <!-- 3) Now we will make the individual tabs in the tab container. Each tab will have its own <div>, so let's create our first tab. Make a <div> and set "data-dojo-type" to "dijit/layout/ContentPane and "data-dojo-props" to "title: name_of_your_tab"-->
+    <!-- 4) In our <div> for our tab, put an <h> with some text and include a <p> for some more text. Yay! We made a tab-->
+    <!-- 5) repeat the above process to make as many tabs as you like, but remember to give your tabs different titles in "data-dojo-props"-->
+
+    <!-- 6) Lets make a container on top of the page. Create another <div> eit class "edgePanel" and set "data-dojo-type" to "dijit/layout/ContentPane". Set the content pane to the top of the page by setting "data-dojo-props" to "region: 'top'" and put some text in the <div> like "Header Content" -->
+    <!-- 7) Now lets make a side bar section. Make a <div> similar to the previous step, but change "data-dojo-props" to "region: 'left', splitter: true". Put some text in your side bar. -->
+    <!-- Yay! We have given our website a  basic tabbed layout!-->
+
+    <div id="appLayout" class="demoLayout">
+        
+        <!-- Make your tab container and tabs here!-->
+
+        <!-- Put your top bar container here! -->
+
+        <!-- Put your side bar container here! -->
+      
+    </div>
+      
+</body>
+</html>
